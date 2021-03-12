@@ -4,7 +4,9 @@ const express = require("express");
 const app = express();
 var cors = require("cors");
 let student = require("./db/students");
-const PORT = 3000;
+
+// process.env.PORT
+const PORT = process.env.PORT || "3000";
 
 // middleware
 app.use(express.json()); // so that postman can send data over!
